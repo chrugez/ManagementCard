@@ -4,15 +4,17 @@ const cardSchema = mongoose.Schema(
     {
         MaThe: {
             type: String,
-            required: true
+            required: true,
+            unique: true
         },
         MaTheIn: {
             type: String,
             required: true,
+            unique: true
         },
         NgayTao: {
             type: Date,
-            required: true,
+            default: new Date()
         },
         NgayHetHan: {
             type: Date,
@@ -20,7 +22,7 @@ const cardSchema = mongoose.Schema(
         },
         TrangThaiKichHoat: {
             type: Boolean,
-            required: true,
+            default: true
         },
         TenKhachHang: {
             type: String,
@@ -28,7 +30,7 @@ const cardSchema = mongoose.Schema(
         },
         DiaChi: {
             type: String,
-            required: true,
+            required: false,
         },
         PhanTang1: {
             type: Boolean,

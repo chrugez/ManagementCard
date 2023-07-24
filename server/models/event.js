@@ -4,23 +4,25 @@ const eventSchema = mongoose.Schema(
     {
         MaThe: {
             type: String,
-            required: true
+            required: true,
+            unique: true
         },
         MaTheIn: {
             type: String,
-            required: true
+            required: true,
+            unique: true
         },
         NgaySuKien: {
             type: Date,
-            required: true
+            default: new Date()
         },
-        TenChuThe: {
+        TenKhachHang: {
             type: String,
             required: true
         },
         DiaChi: {
             type: String,
-            required: true
+            required: false
         }
     }, {
     timestamps: true
